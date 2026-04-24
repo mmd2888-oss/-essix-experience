@@ -224,7 +224,7 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
   margin-bottom: 20px;
   color: var(--black);
 }
-.section-title em { font-style: italic; color: var(--red); }
+.section-title em { font-style: italic; color: var(--red); font-weight: 700; }
 .section-title.center { text-align: center; }
 .section-title.white { color: var(--white); }
 
@@ -502,14 +502,14 @@ footer {
 /* EDIT: Stat numbers */
 .stat-num {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 54px; font-weight: 300;
-  color: var(--red); line-height: 1;
+  font-size: 54px; font-weight: 700;
+  color: var(--black); line-height: 1;
   display: block;
 }
 /* EDIT: Stat labels */
 .stat-label {
   font-size: 9.5px; letter-spacing: 0.22em;
-  text-transform: uppercase; color: var(--mid-gray);
+  text-transform: uppercase; color: var(--black);
   margin-top: 10px; display: block; font-weight: 400;
 }
 
@@ -534,9 +534,9 @@ footer {
 
 /* Scrolling marquee */
 .marquee-wrap {
-  background: var(--white);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  background: var(--black);
+  border-top: none;
+  border-bottom: none;
   padding: 14px 0;
   overflow: hidden; white-space: nowrap;
 }
@@ -545,9 +545,10 @@ footer {
   animation: marquee 30s linear infinite;
   font-family: 'Cormorant Garamond', serif;
   font-size: 15px; font-weight: 300;
-  letter-spacing: 0.14em; color: var(--black);
+  letter-spacing: 0.2em; color: var(--white);
 }
-.marquee-track .sep { color: var(--red); margin: 0 28px; font-size: 9px; vertical-align: middle; }
+.marquee-track span { color: var(--white); }
+.marquee-track .sep { display: none; }
 @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
 /* Philosophy section */
@@ -652,10 +653,11 @@ footer {
 }
 .exp-card {
   background: var(--warm-gray);
-  padding: 48px 36px;
+  padding: 28px 36px 36px;
   border-left: 3px solid transparent;
   transition: border-color 0.3s, background 0.3s;
   cursor: pointer;
+  overflow: hidden;
 }
 .exp-card:hover { border-color: var(--red); background: var(--cream); }
 .exp-num {
@@ -1270,12 +1272,11 @@ footer {
      EDIT: Nav links are managed by the showPage() JS function below
      ============================================================ -->
 <nav id="main-nav">
-  <a class="nav-logo" onclick="showPage('home')" style="display:flex;align-items:center;">
-    <img src="essix-logo.png" alt="The Essix Experience" style="height:52px;width:auto;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-    <div style="display:none;">
-      <span class="nav-logo-the">The</span>
-      <span class="nav-logo-essix">Essix</span>
-      <span class="nav-logo-exp">Experience</span>
+  <a class="nav-logo" onclick="showPage('home')" style="text-decoration:none;cursor:pointer;">
+    <div style="line-height:1;text-align:center;">
+      <span style="display:block;font-family:'Cormorant Garamond',serif;font-size:9px;font-weight:700;letter-spacing:0.5em;color:#BC0304;text-transform:uppercase;">THE</span>
+      <span style="display:block;font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;letter-spacing:0.28em;color:#0E0C0C;text-transform:uppercase;line-height:1;">ESSIX</span>
+      <span style="display:block;font-family:'Cormorant Garamond',serif;font-size:8px;font-weight:700;letter-spacing:0.5em;color:#BC0304;text-transform:uppercase;">EXPERIENCE</span>
     </div>
   </a>
   <ul class="nav-links">
@@ -1376,22 +1377,22 @@ footer {
   <!-- SCROLLING MARQUEE -->
   <div class="marquee-wrap">
     <div class="marquee-track">
-      <span>The Residential Atelier</span><span class="sep">✦</span>
-      <span>The Executive Suite</span><span class="sep">✦</span>
-      <span>The Grand Voyage</span><span class="sep">✦</span>
-      <span>The Maison Closet</span><span class="sep">✦</span>
-      <span>The Private Liaison</span><span class="sep">✦</span>
-      <span>The Corporate Collective</span><span class="sep">✦</span>
-      <span>Personal Assisting</span><span class="sep">✦</span>
-      <span>Nationwide In-Person · Worldwide Virtual</span><span class="sep">✦</span>
-      <span>The Residential Atelier</span><span class="sep">✦</span>
-      <span>The Executive Suite</span><span class="sep">✦</span>
-      <span>The Grand Voyage</span><span class="sep">✦</span>
-      <span>The Maison Closet</span><span class="sep">✦</span>
-      <span>The Private Liaison</span><span class="sep">✦</span>
-      <span>The Corporate Collective</span><span class="sep">✦</span>
-      <span>Personal Assisting</span><span class="sep">✦</span>
-      <span>Nationwide In-Person · Worldwide Virtual</span><span class="sep">✦</span>
+      <span>The Residential Atelier</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Executive Suite</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Grand Voyage</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Maison Closet</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Private Liaison</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Corporate Collective</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>Personal Assisting</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>Nationwide In-Person &nbsp; Worldwide Virtual</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Residential Atelier</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Executive Suite</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Grand Voyage</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Maison Closet</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Private Liaison</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Corporate Collective</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>Personal Assisting</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>Nationwide In-Person &nbsp; Worldwide Virtual</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
   </div>
 
@@ -1409,14 +1410,27 @@ footer {
       <div class="philosophy-attribution reveal">— MJE</div>
     </div>
     <div class="philosophy-image">
-      <!-- EDIT: Replace with philosophy/lifestyle image src="your-image.jpg" -->
-      <div class="philosophy-image-placeholder">[ Lifestyle Photography ]</div>
+      <!-- EDIT: Replace with philosophy/lifestyle image -->
+      <img src="IMG_6061.jpg" alt="Organized space by The Essix Experience" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="philosophy-image-placeholder" style="display:none;">[ Lifestyle Photography ]</div>
     </div>
   </div>
 
-  <!-- S.P.A.C.E. METHOD -->
   <section class="space-section">
     <div class="space-header">
+      <!-- Icon logo centered inside gray section above Proprietary Method -->
+      <div style="text-align:center;margin-bottom:32px;">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 794.5 460.6" style="height:72px;width:auto;display:inline-block;">
+          <path style="fill:#030303;" d="M569.4,271c-1,37.4-27,68.9-64.3,77.6c-4.9,1.1-7.7,2.9-9.2,8.1c-3.5,12.5-12,21.4-22.2,29c-5.3,3.9-10.7,2.3-16,0.2c-12.8-5.1-23.5-13.6-33.9-22.4c-7-5.8-17.1-5.8-24.1,0c-10.3,8.5-20.8,16.7-33.2,22.2c-8.1,3.5-14.7,2.5-21.3-3.5c-10.3-9.3-17.9-20-19.7-33.9c-0.5-4.3-2.4-5-5.9-5.2c-12.4-0.7-24.5-3.7-36.6-6.2c-19.4-4-30.4-16.1-35-34.7c-2.4-9.9-5.1-19.8-3.9-30.2c0.6-5.6,2.8-10.6,8.6-12.4c6.3-1.9,11.5,0.8,15.3,5.9c4.6,6.2,8.7,12.9,13.4,19.1c13.1,17.2,37.4,25.8,56.4,20.1c6.4-1.9,12.8-4.4,13.4-12.4c0.7-8.1-4.9-12.3-11.4-15.1c-15.4-6.6-32-10-46.8-18.1c-20.6-11.3-36.8-26.6-42.2-50.3c-5.9-25.7,7.5-52.5,33.2-68c2.3-1.4,4.7-2.6,7-3.8c13.7-7.1,25.4-9.4,38.6,4c18.7,19.2,42.2,32.2,69.3,36.1c33.3,4.8,65.9,2.1,96.7-13.1c1.3-0.6,2.5-1.8,4.2-0.9c1.6,0.9,2.2,2.9,1.3,4.5c-0.1,0.1-0.1,0.2-0.2,0.3c-1.8,3-3.7,5.8-5.9,8.5c-4.2,4.7-8.3,9.6-12,14.7c-4.1,5.7-8,11.6-9.7,18.6c-1.9,7.8,1.2,10.9,8.8,8.7c4.7-1.3,9.2-3,13.9-4.3C534.1,203.2,570.5,231.6,569.4,271z M348.5,165.7c0.7,0-0.7,0-2.2,0.2c-9.1,0.9-14.4,4.7-15.8,11.3c-1.6,7.7,1.7,13.8,10,18.1c1.9,1,3.9,1.9,6,2.6c17.4,5.7,35.6,9.5,51.9,18.4c2.1,1.1,2.9,0.6,3.9-1.3c2.1-4.4,4.3-8.7,6.5-13c0.8-1.5,1.2-2.7-0.9-3.3c-11.7-3.1-18.6-12.8-27.4-19.9S362.6,165.7,348.5,165.7z M503.9,294.3c-1.4-12.9-4.9-24.9-14.3-34.3c-4.7-4.8-10.6-7-17.3-4.6c-6.3,2.3-8.4,7.8-8.8,13.9c-1,15,5.4,26.4,16.8,35.9c5.4,4.5,10.5,5.8,16.5,3.1S503.9,300.1,503.9,294.3z"/>
+          <path style="fill:#030303;" d="M477.3,80.6c-0.3-1.3-1.4-3.9-0.1-3.2c17.2,8.9,30.1,25.3,34.3,43.6c2,8.8-0.8,21.1-6.3,28.2c-13.1,16.8-31.3,20.6-51.4,24.5h-0.1c-68.2,8.7-107.1-10.8-142.9-59.6c-7.5-10.1,3.9-16.5,8.7-20.6c2.2-2,12.6-11.9,14-9.7c1.5,2.4,2.9,5.4,5.9,8.3c26.4,30.7,56,43.2,95.1,40.7c20-1.3,38.7-15.3,43.5-33.9C479.9,92,478.5,86.7,477.3,80.6z"/>
+          <path style="fill:#030303;" d="M339.2,48.8c0.1-2.2,0.1-4.7,0.2-6.9c0.8-15.5,4-20.1,19-23.7c31.3-7.5,62.1-5.9,92.1,6.1c5.2,2.1,10.1,4.8,14.6,8.1c5.4,4,8.4,9,8.3,16c-0.1,9.6,1.3,19.3,1.6,28.8s-4.8,18.3-13.7,23.4c-18.5,10.7-41.3,15.9-63,13.3c-3.8-0.8-1.9-1.5-2.1-5.4c0-2.9-0.3-10.2-0.6-15.4c-0.5-9.9-7.8-15.7-7.5-13.4c0.7,7.3-1.3,1.7-6.9-6.7c-7.3-11.1-17.7-19.9-29.8-25.2c-1.3-0.6-3.8-1.6-4-0.7C345.9,57.4,344,49.7,339.2,48.8z"/>
+          <path style="fill:#BC0304;" d="M387.9,112.6c-2.1-0.2-4.2-0.6-6.2-1.2c-7.8-2-13-5.9-20.1-11.5c-3.6-3.3-11-10.1-7.8-9.8c15.1,1.5,4.5-5.2,2.2-6.9c-5.7-4.5-11.9-8.2-17.9-12.3c-10.7-7.5-20.5-13.4-31.2-21.1c8.1-4.5,16-4.1,24-2.6c3,0.5,6,1.4,8.8,2.5c3.7,1.4,6.9,9,8.4-0.8c0.1-0.6,0.6-1.1,2.1-0.5c12.9,5.1,21.6,13.8,29.5,24.8c2.4,3.4,10.3,17,9.5,10.2c-0.8-6.5,5,3,5.4,9.8c0.3,5.6,0.4,3.6,0.7,14.7c-0.1,2.5,1.3,5.2-5.8,4.8 M388.9,107.1c-1.5-12.9-51-55.9-58.8-53.7C342.7,56.2,384.1,99.7,388.9,107.1L388.9,107.1z"/>
+          <path style="fill:#030303;" d="M337.9,72.8c6.1,4,15.1,9.5,20.7,13.9c2.2,1.8,2.1,3.1-7.4,2.2c-2.6-0.2,6.3,9.2,8.1,11c-11.4-3-21.3-11.5-25.1-17.8C335,78.9,336.3,75.7,337.9,72.8z"/>
+          <path style="fill:#BC0304;stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;" d="M335.3,336c1.2-17.3,7-26,17-35.5c6.7-6.4,15.1-4.8,22.6-2.3c8.4,2.8,15.2,8.5,22.5,13.5c4.3,2.9,4.7,6,3.1,10.1c-3.5,8.8-3.6,18.6-0.2,27.4c1.2,3.3,0.5,5.1-2.3,7.5c-7.1,6-15,11-23.4,14.9c-11.8,5.5-17.5,5.7-25.4-3.6S335.8,352.4,335.3,336z"/>
+          <path style="fill:#BC0304;stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;" d="M484.9,335.2c0.8,17.1-9.3,28.2-21,38.1c-3.5,2.9-8.7,2.4-13.1,0.2c-8.7-4.1-16.4-9.9-24.3-15.2c-3-2-3.4-4.6-2-8.9c3.3-9.9,3.8-20.4-0.9-30.2c-1.2-2.5-2.5-4.9,0.2-6.7c8.1-5.3,15.7-11.5,24.9-15.1c10.5-4.2,18.6,1,24.8,8.3C480.5,314.1,486,323.6,484.9,335.2z"/>
+          <path style="fill:#030303;" d="M430.3,333.4c0,17.8-3.2,24.7-17.3,24.8c-11.7,0.1-17.3-7.3-17.3-24.9c0-14.1,5.6-22.3,16.8-22.3S430.3,319.2,430.3,333.4z"/>
+        </svg>
+      </div>
       <div class="eyebrow center reveal">Our Proprietary Method</div>
       <h2 class="section-title center reveal">The S.P.A.C.E. Framework</h2>
       <!-- EDIT: S.P.A.C.E. intro copy -->
@@ -1465,24 +1479,36 @@ footer {
     <div class="experiences-grid">
       <div class="exp-card reveal" onclick="showPage('experiences'); scrollToExp('residential')">
         <div class="exp-num">I</div>
+        <div style="width:100%;height:200px;overflow:hidden;margin-bottom:16px;">
+          <img src="IMG_9756.jpg" alt="The Residential Atelier" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onerror="this.parentElement.style.background='#E8E8E8';this.style.display='none'">
+        </div>
         <div class="exp-title">The Residential Atelier</div>
         <div class="exp-price">From $400</div>
         <div class="exp-desc">Full-home transformations. Every room reimagined with precision and calm.</div>
       </div>
       <div class="exp-card reveal" onclick="showPage('experiences'); scrollToExp('executive')">
         <div class="exp-num">II</div>
+        <div style="width:100%;height:200px;overflow:hidden;margin-bottom:16px;">
+          <img src="IMG_5058.jpg" alt="The Executive Suite" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onerror="this.parentElement.style.background='#E8E8E8';this.style.display='none'">
+        </div>
         <div class="exp-title">The Executive Suite</div>
         <div class="exp-price">From $500</div>
         <div class="exp-desc">Workspace optimization for executives, studios, and teams.</div>
       </div>
       <div class="exp-card reveal" onclick="showPage('experiences'); scrollToExp('voyage')">
         <div class="exp-num">III</div>
+        <div style="width:100%;height:200px;overflow:hidden;margin-bottom:16px;">
+          <img src="IMG_5675.jpg" alt="The Grand Voyage" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onerror="this.parentElement.style.background='#E8E8E8';this.style.display='none'">
+        </div>
         <div class="exp-title">The Grand Voyage</div>
         <div class="exp-price">From $500</div>
         <div class="exp-desc">White-glove packing and unpacking. Walk in like it was always yours.</div>
       </div>
       <div class="exp-card reveal" onclick="showPage('experiences'); scrollToExp('maison')">
         <div class="exp-num">IV</div>
+        <div style="width:100%;height:200px;overflow:hidden;margin-bottom:16px;">
+          <img src="IMG_2414.jpg" alt="The Maison Closet" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onerror="this.parentElement.style.background='#E8E8E8';this.style.display='none'">
+        </div>
         <div class="exp-title">The Maison Closet</div>
         <div class="exp-price">From $1,000</div>
         <div class="exp-desc">Curated wardrobes and capsule builds. Dressing made effortless.</div>
@@ -2533,7 +2559,23 @@ footer {
 <footer id="site-footer">
   <div class="footer-grid">
     <div>
-      <img src="essix-logo.png" alt="The Essix Experience" style="height:64px;width:auto;display:block;margin-bottom:16px;" onerror="this.style.display='none'">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 794.5 460.6" style="height:60px;width:auto;display:block;flex-shrink:0;">
+          <path style="fill:#030303;" d="M569.4,271c-1,37.4-27,68.9-64.3,77.6c-4.9,1.1-7.7,2.9-9.2,8.1c-3.5,12.5-12,21.4-22.2,29c-5.3,3.9-10.7,2.3-16,0.2c-12.8-5.1-23.5-13.6-33.9-22.4c-7-5.8-17.1-5.8-24.1,0c-10.3,8.5-20.8,16.7-33.2,22.2c-8.1,3.5-14.7,2.5-21.3-3.5c-10.3-9.3-17.9-20-19.7-33.9c-0.5-4.3-2.4-5-5.9-5.2c-12.4-0.7-24.5-3.7-36.6-6.2c-19.4-4-30.4-16.1-35-34.7c-2.4-9.9-5.1-19.8-3.9-30.2c0.6-5.6,2.8-10.6,8.6-12.4c6.3-1.9,11.5,0.8,15.3,5.9c4.6,6.2,8.7,12.9,13.4,19.1c13.1,17.2,37.4,25.8,56.4,20.1c6.4-1.9,12.8-4.4,13.4-12.4c0.7-8.1-4.9-12.3-11.4-15.1c-15.4-6.6-32-10-46.8-18.1c-20.6-11.3-36.8-26.6-42.2-50.3c-5.9-25.7,7.5-52.5,33.2-68c2.3-1.4,4.7-2.6,7-3.8c13.7-7.1,25.4-9.4,38.6,4c18.7,19.2,42.2,32.2,69.3,36.1c33.3,4.8,65.9,2.1,96.7-13.1c1.3-0.6,2.5-1.8,4.2-0.9c1.6,0.9,2.2,2.9,1.3,4.5c-0.1,0.1-0.1,0.2-0.2,0.3c-1.8,3-3.7,5.8-5.9,8.5c-4.2,4.7-8.3,9.6-12,14.7c-4.1,5.7-8,11.6-9.7,18.6c-1.9,7.8,1.2,10.9,8.8,8.7c4.7-1.3,9.2-3,13.9-4.3C534.1,203.2,570.5,231.6,569.4,271z M348.5,165.7c0.7,0-0.7,0-2.2,0.2c-9.1,0.9-14.4,4.7-15.8,11.3c-1.6,7.7,1.7,13.8,10,18.1c1.9,1,3.9,1.9,6,2.6c17.4,5.7,35.6,9.5,51.9,18.4c2.1,1.1,2.9,0.6,3.9-1.3c2.1-4.4,4.3-8.7,6.5-13c0.8-1.5,1.2-2.7-0.9-3.3c-11.7-3.1-18.6-12.8-27.4-19.9S362.6,165.7,348.5,165.7z M503.9,294.3c-1.4-12.9-4.9-24.9-14.3-34.3c-4.7-4.8-10.6-7-17.3-4.6c-6.3,2.3-8.4,7.8-8.8,13.9c-1,15,5.4,26.4,16.8,35.9c5.4,4.5,10.5,5.8,16.5,3.1S503.9,300.1,503.9,294.3z"/>
+          <path style="fill:#030303;" d="M477.3,80.6c-0.3-1.3-1.4-3.9-0.1-3.2c17.2,8.9,30.1,25.3,34.3,43.6c2,8.8-0.8,21.1-6.3,28.2c-13.1,16.8-31.3,20.6-51.4,24.5h-0.1c-68.2,8.7-107.1-10.8-142.9-59.6c-7.5-10.1,3.9-16.5,8.7-20.6c2.2-2,12.6-11.9,14-9.7c1.5,2.4,2.9,5.4,5.9,8.3c26.4,30.7,56,43.2,95.1,40.7c20-1.3,38.7-15.3,43.5-33.9C479.9,92,478.5,86.7,477.3,80.6z"/>
+          <path style="fill:#030303;" d="M339.2,48.8c0.1-2.2,0.1-4.7,0.2-6.9c0.8-15.5,4-20.1,19-23.7c31.3-7.5,62.1-5.9,92.1,6.1c5.2,2.1,10.1,4.8,14.6,8.1c5.4,4,8.4,9,8.3,16c-0.1,9.6,1.3,19.3,1.6,28.8s-4.8,18.3-13.7,23.4c-18.5,10.7-41.3,15.9-63,13.3c-3.8-0.8-1.9-1.5-2.1-5.4c0-2.9-0.3-10.2-0.6-15.4c-0.5-9.9-7.8-15.7-7.5-13.4c0.7,7.3-1.3,1.7-6.9-6.7c-7.3-11.1-17.7-19.9-29.8-25.2c-1.3-0.6-3.8-1.6-4-0.7C345.9,57.4,344,49.7,339.2,48.8z"/>
+          <path style="fill:#BC0304;" d="M387.9,112.6c-2.1-0.2-4.2-0.6-6.2-1.2c-7.8-2-13-5.9-20.1-11.5c-3.6-3.3-11-10.1-7.8-9.8c15.1,1.5,4.5-5.2,2.2-6.9c-5.7-4.5-11.9-8.2-17.9-12.3c-10.7-7.5-20.5-13.4-31.2-21.1c8.1-4.5,16-4.1,24-2.6c3,0.5,6,1.4,8.8,2.5c3.7,1.4,6.9,9,8.4-0.8c0.1-0.6,0.6-1.1,2.1-0.5c12.9,5.1,21.6,13.8,29.5,24.8c2.4,3.4,10.3,17,9.5,10.2c-0.8-6.5,5,3,5.4,9.8c0.3,5.6,0.4,3.6,0.7,14.7c-0.1,2.5,1.3,5.2-5.8,4.8 M388.9,107.1c-1.5-12.9-51-55.9-58.8-53.7C342.7,56.2,384.1,99.7,388.9,107.1L388.9,107.1z"/>
+          <path style="fill:#030303;" d="M337.9,72.8c6.1,4,15.1,9.5,20.7,13.9c2.2,1.8,2.1,3.1-7.4,2.2c-2.6-0.2,6.3,9.2,8.1,11c-11.4-3-21.3-11.5-25.1-17.8C335,78.9,336.3,75.7,337.9,72.8z"/>
+          <path style="fill:#BC0304;stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;" d="M335.3,336c1.2-17.3,7-26,17-35.5c6.7-6.4,15.1-4.8,22.6-2.3c8.4,2.8,15.2,8.5,22.5,13.5c4.3,2.9,4.7,6,3.1,10.1c-3.5,8.8-3.6,18.6-0.2,27.4c1.2,3.3,0.5,5.1-2.3,7.5c-7.1,6-15,11-23.4,14.9c-11.8,5.5-17.5,5.7-25.4-3.6S335.8,352.4,335.3,336z"/>
+          <path style="fill:#BC0304;stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;" d="M484.9,335.2c0.8,17.1-9.3,28.2-21,38.1c-3.5,2.9-8.7,2.4-13.1,0.2c-8.7-4.1-16.4-9.9-24.3-15.2c-3-2-3.4-4.6-2-8.9c3.3-9.9,3.8-20.4-0.9-30.2c-1.2-2.5-2.5-4.9,0.2-6.7c8.1-5.3,15.7-11.5,24.9-15.1c10.5-4.2,18.6,1,24.8,8.3C480.5,314.1,486,323.6,484.9,335.2z"/>
+          <path style="fill:#030303;" d="M430.3,333.4c0,17.8-3.2,24.7-17.3,24.8c-11.7,0.1-17.3-7.3-17.3-24.9c0-14.1,5.6-22.3,16.8-22.3S430.3,319.2,430.3,333.4z"/>
+        </svg>
+        <div style="line-height:1;text-align:center;">
+          <span style="display:block;font-family:'Cormorant Garamond',serif;font-size:9px;font-weight:300;letter-spacing:0.5em;color:#0E0C0C;text-transform:uppercase;">THE</span>
+          <span style="display:block;font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;letter-spacing:0.28em;color:#BC0304;text-transform:uppercase;line-height:1.1;">ESSIX</span>
+          <span style="display:block;font-family:'Cormorant Garamond',serif;font-size:8px;font-weight:400;letter-spacing:0.5em;color:#0E0C0C;text-transform:uppercase;">EXPERIENCE</span>
+        </div>
+      </div>
       <!-- EDIT: Footer tagline -->
       <p class="footer-tagline">Transforming spaces. Simplifying lives.</p>
       <div class="footer-socials">
