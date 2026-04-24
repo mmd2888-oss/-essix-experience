@@ -1070,7 +1070,7 @@ footer {
   gap: 3px; padding: 3px;
 }
 .portfolio-full-item {
-  aspect-ratio: 4/3; background: var(--warm-gray);
+  aspect-ratio: 3/2; background: var(--warm-gray);
   overflow: hidden; position: relative;
 }
 .portfolio-full-item img {
@@ -1490,7 +1490,7 @@ footer {
     <div class="experiences-grid">
       <div class="exp-card reveal" onclick="showPage('experiences'); scrollToExp('residential')">
         <div class="exp-num">I</div>
-        <div style="width:100%;height:200px;overflow:hidden;margin-bottom:16px;">
+        <div style="width:100%;aspect-ratio:4/3;overflow:hidden;margin-bottom:16px;">
           <img src="garage-before.jpg" alt="The Residential Atelier" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onerror="this.parentElement.style.background='#E8E8E8';this.style.display='none'">
         </div>
         <div class="exp-title">The Residential Atelier</div>
@@ -1499,7 +1499,7 @@ footer {
       </div>
       <div class="exp-card reveal" onclick="showPage('experiences'); scrollToExp('executive')">
         <div class="exp-num">II</div>
-        <div style="width:100%;height:200px;overflow:hidden;margin-bottom:16px;">
+        <div style="width:100%;aspect-ratio:4/3;overflow:hidden;margin-bottom:16px;">
           <img src="IMG_5058.jpg" alt="The Executive Suite" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onerror="this.parentElement.style.background='#E8E8E8';this.style.display='none'">
         </div>
         <div class="exp-title">The Executive Suite</div>
@@ -1508,7 +1508,7 @@ footer {
       </div>
       <div class="exp-card reveal" onclick="showPage('experiences'); scrollToExp('voyage')">
         <div class="exp-num">III</div>
-        <div style="width:100%;height:200px;overflow:hidden;margin-bottom:16px;">
+        <div style="width:100%;aspect-ratio:4/3;overflow:hidden;margin-bottom:16px;">
           <img src="moving-boxes.jpg" alt="The Grand Voyage" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onerror="this.parentElement.style.background='#E8E8E8';this.style.display='none'">
         </div>
         <div class="exp-title">The Grand Voyage</div>
@@ -1517,7 +1517,7 @@ footer {
       </div>
       <div class="exp-card reveal" onclick="showPage('experiences'); scrollToExp('maison')">
         <div class="exp-num">IV</div>
-        <div style="width:100%;height:200px;overflow:hidden;margin-bottom:16px;">
+        <div style="width:100%;aspect-ratio:4/3;overflow:hidden;margin-bottom:16px;">
           <img src="IMG_2414.jpg" alt="The Maison Closet" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onerror="this.parentElement.style.background='#E8E8E8';this.style.display='none'">
         </div>
         <div class="exp-title">The Maison Closet</div>
@@ -1758,9 +1758,9 @@ footer {
     <div class="eyebrow reveal">In-Person</div>
     <h2 class="experience-block-title reveal">The Residential Atelier</h2>
     <!-- EDIT: Experience hero image — replace src with your photo -->
-    <div style="width:100%;height:360px;overflow:hidden;margin-bottom:32px;" class="reveal">
-      <img src="garage-before.jpg" alt="The Residential Atelier" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="exp-photo-placeholder" style="display:none;width:100%;height:100%;background:#E8E8E8;align-items:center;justify-content:center;font-family:'Raleway',sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#9A9186;">[ The Residential Atelier — Add Photo ]</div>
+    <div style="width:100%;aspect-ratio:16/9;overflow:hidden;margin-bottom:32px;" class="reveal">
+      <img src="garage-before.jpg" alt="The Residential Atelier" style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="exp-photo-placeholder" style="display:none;width:100%;aspect-ratio:16/9;background:#E8E8E8;align-items:center;justify-content:center;font-family:'Raleway',sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#9A9186;">[ The Residential Atelier — Add Photo ]</div>
     </div>
     <p class="experience-block-desc reveal">Comprehensive residential transformations architected around how you truly live. From overwhelmed to immaculate. Kitchens, closets, garages, nurseries, pantries, home offices, and every space in between. Each engagement follows our proprietary S.P.A.C.E. methodology. This is not tidying. This is a complete lifestyle recalibration.</p>
     <div class="pricing-cards reveal">
@@ -1816,9 +1816,9 @@ footer {
     <div class="eyebrow reveal">Workspace</div>
     <h2 class="experience-block-title reveal">The Executive Suite</h2>
     <!-- EDIT: Experience hero image — replace src with your photo -->
-    <div style="width:100%;height:360px;overflow:hidden;margin-bottom:32px;" class="reveal">
+    <div style="width:100%;aspect-ratio:16/9;overflow:hidden;margin-bottom:32px;" class="reveal">
       <img src="IMG_5058.jpg" alt="The Executive Suite" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="exp-photo-placeholder" style="display:none;width:100%;height:100%;background:#E8E8E8;align-items:center;justify-content:center;font-family:'Raleway',sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#9A9186;">[ The Executive Suite — Add Photo ]</div>
+      <div class="exp-photo-placeholder" style="display:none;width:100%;aspect-ratio:16/9;background:#E8E8E8;align-items:center;justify-content:center;font-family:'Raleway',sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#9A9186;">[ The Executive Suite — Add Photo ]</div>
     </div>
     <p class="experience-block-desc reveal">Your workspace is your war room. We optimize offices, studios, co-working spaces, and executive suites to maximize output, minimize decision fatigue, and create environments that reflect the caliber of your work.</p>
     <div class="pricing-cards reveal">
@@ -1873,9 +1873,9 @@ footer {
     <div class="eyebrow reveal">Relocation</div>
     <h2 class="experience-block-title reveal">The Grand Voyage</h2>
     <!-- EDIT: Experience hero image — replace src with your photo -->
-    <div style="width:100%;height:360px;overflow:hidden;margin-bottom:32px;" class="reveal">
+    <div style="width:100%;aspect-ratio:16/9;overflow:hidden;margin-bottom:32px;" class="reveal">
       <img src="moving-boxes.jpg" alt="The Grand Voyage" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="exp-photo-placeholder" style="display:none;width:100%;height:100%;background:#E8E8E8;align-items:center;justify-content:center;font-family:'Raleway',sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#9A9186;">[ The Grand Voyage — Add Photo ]</div>
+      <div class="exp-photo-placeholder" style="display:none;width:100%;aspect-ratio:16/9;background:#E8E8E8;align-items:center;justify-content:center;font-family:'Raleway',sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#9A9186;">[ The Grand Voyage — Add Photo ]</div>
     </div>
     <p class="experience-block-desc reveal">Relocation should never descend into chaos. Our white-glove packing and unpacking concierge ensures you depart your former residence with composure and arrive in your new home as though it has always been yours. Every item labeled, placed, and styled from the moment you walk through the door. Each engagement includes one load of junk removal (furniture not included).</p>
     <div class="pricing-cards four reveal">
@@ -1942,9 +1942,9 @@ footer {
     <div class="eyebrow reveal">Wardrobe</div>
     <h2 class="experience-block-title reveal">The Maison Closet</h2>
     <!-- EDIT: Experience hero image — replace src with your photo -->
-    <div style="width:100%;height:360px;overflow:hidden;margin-bottom:32px;" class="reveal">
+    <div style="width:100%;aspect-ratio:16/9;overflow:hidden;margin-bottom:32px;" class="reveal">
       <img src="IMG_2414.jpg" alt="The Maison Closet" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="exp-photo-placeholder" style="display:none;width:100%;height:100%;background:#E8E8E8;align-items:center;justify-content:center;font-family:'Raleway',sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#9A9186;">[ The Maison Closet — Add Photo ]</div>
+      <div class="exp-photo-placeholder" style="display:none;width:100%;aspect-ratio:16/9;background:#E8E8E8;align-items:center;justify-content:center;font-family:'Raleway',sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#9A9186;">[ The Maison Closet — Add Photo ]</div>
     </div>
     <p class="experience-block-desc reveal">Your closet should function as a personal showroom, not a storage facility. We curate, organize, and design wardrobes that transform getting dressed into the most effortless part of your day. From capsule wardrobe architecture to color-coded couture systems to seasonal rotation programs. Dressing should feel like a luxury. Because it can be.</p>
     <div class="pricing-cards reveal">
@@ -2378,7 +2378,7 @@ footer {
     <p class="body-text center reveal" style="max-width:500px;margin:0 auto 40px;">Book your complimentary 15-minute first call or 30-minute discovery session ($75) instantly. No waiting.</p>
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;" class="reveal">
       <a href="https://www.theessixexperience.com/book-online" class="btn-red" target="_blank">Book Your First Call — Free</a>
-      <a href="https://www.theessixexperience.com/book-online" class="btn-outline" target="_blank">The Discovery — $75 → Book & Pay</a>
+      <a href="https://www.theessixexperience.com/book-online" class="btn-outline" target="_blank">The Discovery — $75</a>
     </div>
   </div>
 
@@ -2405,9 +2405,9 @@ footer {
         <div class="connect-info-label">Follow Us</div>
         <div class="connect-info-value">
           <!-- EDIT: Social media links -->
-          <a href="#" target="_blank">Instagram</a> &nbsp;·&nbsp;
-          <a href="#" target="_blank">Facebook</a> &nbsp;·&nbsp;
-          <a href="#" target="_blank">YouTube</a>
+          <a href="https://www.instagram.com/essix_experience" target="_blank">Instagram</a> &nbsp;·&nbsp;
+          <a href="https://www.facebook.com/theessixexperience/" target="_blank">Facebook</a> &nbsp;·&nbsp;
+          <a href="https://www.youtube.com/channel/UCrirmy7U09CcpnL4anuQCiA" target="_blank">YouTube</a>
         </div>
       </div>
     </div>
@@ -2533,7 +2533,7 @@ footer {
     <div class="eyebrow center">The Invitation</div>
     <h2 class="section-title center" style="color:var(--white);">An organized space is an organized <em style="color:rgba(255,255,255,0.7)">life.</em></h2>
     <div style="margin-top:32px;">
-      <a href="https://www.theessixexperience.com/book-online" class="btn-outline-white" target="_blank">Book Your First Call Instantly</a>
+      <a href="#" onclick="showPage('connect');return false;" class="btn-outline-white">Book Your First Call Instantly</a>
     </div>
   </div>
 </div><!-- end connect page -->
@@ -2562,7 +2562,7 @@ footer {
       <span style="padding:10px 20px;border:1px solid var(--border);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-body);">Nationwide In-Person</span>
       <span style="padding:10px 20px;background:var(--red);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--white);">Worldwide Virtual</span>
     </div>
-    <a href="https://www.theessixexperience.com/book-online" class="btn-red" target="_blank">Book Your First Call</a>
+    <a href="#" onclick="showPage('connect');return false;" class="btn-red">Book Your First Call</a>
   </div>
 </div><!-- end service areas page -->
 
@@ -2593,9 +2593,9 @@ footer {
       <p class="footer-tagline">Transforming spaces. Simplifying lives.</p>
       <div class="footer-socials">
         <!-- EDIT: Social media links -->
-        <a href="https://www.instagram.com/theessixexperience" class="footer-social" target="_blank">ig</a>
-        <a href="https://www.facebook.com/theessixexperience" class="footer-social" target="_blank">fb</a>
-        <a href="https://www.youtube.com/@theessixexperience" class="footer-social" target="_blank">yt</a>
+        <a href="https://www.instagram.com/essix_experience" class="footer-social" target="_blank">ig</a>
+        <a href="https://www.facebook.com/theessixexperience/" class="footer-social" target="_blank">fb</a>
+        <a href="https://www.youtube.com/channel/UCrirmy7U09CcpnL4anuQCiA" class="footer-social" target="_blank">yt</a>
       </div>
     </div>
     <div>
@@ -2626,7 +2626,7 @@ footer {
         <!-- EDIT: Footer contact info -->
         <li><a href="mailto:theessixexperience@gmail.com">theessixexperience@gmail.com</a></li>
         <li><a href="tel:3138177611">313.817.7611</a></li>
-        <li><a href="https://www.theessixexperience.com/book-online" target="_blank">Book Online</a></li>
+        <li><a href="#" onclick="showPage('connect');return false;">Book Online</a></li>
         <li><a onclick="showPage('connect')">Contact Form</a></li>
       </ul>
     </div>
