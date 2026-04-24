@@ -211,6 +211,7 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
   text-transform: uppercase;
   color: var(--red);
   margin-bottom: 14px;
+  margin-top: 4px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
 }
@@ -524,12 +525,14 @@ footer {
   font-size: 9px; letter-spacing: 0.28em;
   text-transform: uppercase; color: var(--mid-gray);
   margin-bottom: 14px; font-weight: 400;
+  font-family: 'Raleway', sans-serif;
 }
 /* EDIT: Press/media mentions */
 .press-names {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 16px; letter-spacing: 0.12em;
-  color: var(--black); line-height: 2;
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px; letter-spacing: 0;
+  color: var(--red); line-height: 2;
+  font-weight: 700;
 }
 
 /* Scrolling marquee */
@@ -542,7 +545,7 @@ footer {
 }
 .marquee-track {
   display: inline-block;
-  animation: marquee 30s linear infinite;
+  animation: marquee 45s linear infinite;
   font-family: 'Cormorant Garamond', serif;
   font-size: 15px; font-weight: 300;
   letter-spacing: 0.2em; color: var(--white);
@@ -702,6 +705,7 @@ footer {
 .process-title {
   font-family: 'Cormorant Garamond', serif;
   font-size: 22px; margin-bottom: 12px; color: var(--black);
+  font-weight: 700;
 }
 .process-desc { font-size: 13px; line-height: 1.8; color: var(--mid-gray); }
 .process-price {
@@ -716,7 +720,13 @@ footer {
   background: var(--black);
   padding: 100px 48px; text-align: center;
 }
-.t-stars { color: var(--red); font-size: 20px; margin-bottom: 32px; letter-spacing: 4px; }
+.t-stars { display:none; }
+.t-quote-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 120px; line-height: 0.8;
+  color: var(--red); margin-bottom: 24px;
+  display: block; font-weight: 700;
+}
 .t-quote {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(20px, 2.8vw, 36px);
@@ -853,13 +863,13 @@ footer {
 }
 .experience-block-num {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 80px; font-weight: 300;
-  color: var(--red); opacity: 0.12;
-  line-height: 1; margin-bottom: -20px;
+  font-size: 60px; font-weight: 300;
+  color: var(--red); opacity: 0.2;
+  line-height: 1; margin-bottom: 8px;
 }
 .experience-block-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 36px; font-weight: 300;
+  font-size: 36px; font-weight: 700;
   color: var(--black); margin-bottom: 16px;
 }
 .experience-block-desc {
@@ -885,7 +895,7 @@ footer {
 .pricing-card.featured {
   background: var(--black); border-color: var(--black);
 }
-.pricing-card.featured .pc-name,
+.pricing-card.featured .pc-name { color: rgba(255,255,255,0.9); }
 .pricing-card.featured .pc-period,
 .pricing-card.featured .pc-feature { color: rgba(255,255,255,0.6); }
 .pricing-card.featured .pc-price { color: var(--red); }
@@ -896,13 +906,14 @@ footer {
   text-transform: uppercase; padding: 4px 12px; font-weight: 500;
 }
 .pc-name {
-  font-size: 10px; letter-spacing: 0.18em;
-  text-transform: uppercase; color: var(--mid-gray);
-  margin-bottom: 16px; font-weight: 400;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px; letter-spacing: 0.04em;
+  text-transform: none; color: var(--black);
+  margin-bottom: 10px; font-weight: 700;
 }
 .pc-price {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 44px; font-weight: 300;
+  font-size: 44px; font-weight: 700;
   line-height: 1; color: var(--black);
 }
 .pc-period {
@@ -1371,28 +1382,28 @@ footer {
   <div class="press-bar reveal">
     <div class="press-label">As Seen On</div>
     <!-- EDIT: Press mentions — add or remove names separated by · -->
-    <div class="press-names">Essence &nbsp;·&nbsp; SKIMS &nbsp;·&nbsp; Call Her Daddy &nbsp;·&nbsp; Voyage LA &nbsp;·&nbsp; Shoutout LA &nbsp;·&nbsp; Voyage Detroit &nbsp;·&nbsp; America's Biggest Hoarders &nbsp;·&nbsp; Better Homes & Gardens &nbsp;·&nbsp; Nickelodeon &nbsp;·&nbsp; Prime Video &nbsp;·&nbsp; WeWork</div>
+    <div class="press-names">
+      Essence &nbsp;&nbsp;·&nbsp;&nbsp; SKIMS &nbsp;&nbsp;·&nbsp;&nbsp; Call Her Daddy &nbsp;&nbsp;·&nbsp;&nbsp; Voyage LA<br>
+      Shoutout LA &nbsp;&nbsp;·&nbsp;&nbsp; Voyage Detroit &nbsp;&nbsp;·&nbsp;&nbsp; America's Biggest Hoarders &nbsp;&nbsp;·&nbsp;&nbsp; Better Homes & Gardens<br>
+      Nickelodeon &nbsp;&nbsp;·&nbsp;&nbsp; Prime Video &nbsp;&nbsp;·&nbsp;&nbsp; WeWork
+    </div>
   </div>
 
   <!-- SCROLLING MARQUEE -->
   <div class="marquee-wrap">
     <div class="marquee-track">
-      <span>The Residential Atelier</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span>The Executive Suite</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span>The Grand Voyage</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span>The Maison Closet</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span>The Private Liaison</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span>The Corporate Collective</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span>Personal Assisting</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span>Nationwide In-Person &nbsp; Worldwide Virtual</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span>The Residential Atelier</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span>The Executive Suite</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span>The Grand Voyage</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span>The Maison Closet</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span>The Private Liaison</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span>The Corporate Collective</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span>Personal Assisting</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span>Nationwide In-Person &nbsp; Worldwide Virtual</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Residential Atelier</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Executive Suite</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Grand Voyage</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Maison Closet</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Private Liaison</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Corporate Collective</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Residential Atelier</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Executive Suite</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Grand Voyage</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Maison Closet</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Private Liaison</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>The Corporate Collective</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
   </div>
 
@@ -1565,7 +1576,7 @@ footer {
 
   <!-- TESTIMONIAL -->
   <section class="testimonial-strip">
-    <div class="t-stars reveal">★★★★★</div>
+    <div class="t-quote-mark reveal">&#8220;</div>
     <!-- EDIT: Featured testimonial quote -->
     <blockquote class="t-quote reveal">"Falynn did my closet a few months ago and I've been living in pure bliss and simplicity ever since. I honestly never knew how much time I spent looking for an outfit until she came and made dressing up easy and fun. I highly recommend Falynn for her professionalism, work ethic and ability to get the job done!"</blockquote>
     <!-- EDIT: Testimonial attribution -->
