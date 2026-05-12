@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Essix Edit — Luxury Organizing & Lifestyle Editorial</title>
+<meta name="description" content="The Essix Edit is the editorial journal of The Essix Experience — luxury organizing tips, wardrobe curation guides, and relocation insights for discerning clients in Los Angeles, Miami, Detroit, and beyond.">
+<!-- Open Graph -->
+<meta property="og:title" content="The Essix Edit — Luxury Organizing & Lifestyle Editorial">
+<meta property="og:description" content="Curated organizing insights, wardrobe wisdom, and relocation guidance from The Essix Experience.">
+<meta property="og:image" content="falynn-hero.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.theessixexperience.com/edit">
+<!-- Canonical -->
+<link rel="canonical" href="https://www.theessixexperience.com/edit">
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Raleway:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --red:       #BC0304;
+  --red-deep:  #8C0203;
+  --black:     #000000;
+  --cream:     #F0F0F0;
+  --white:     #FFFFFF;
+  --border:    #E8E3DA;
+  --mid-gray:  #9A9186;
+  --text-body: #3D3935;
+  --gold:      #C4A25A;
+  --warm-gray: #E8E8E8;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; overflow-x:hidden; }
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ── NAV ── */
+.site-nav {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-body);
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--red); }
+
+.nav-cta {
+  background: var(--red);
+  color: var(--white) !important;
+  padding: 10px 20px;
+  font-size: 10px !important;
+  letter-spacing: 0.2em !important;
+  transition: background 0.2s !important;
+}
+
+.nav-cta:hover { background: var(--red-deep) !important; color: var(--white) !important; }
+
+/* ── MASTHEAD ── */
+.masthead {
+  background: var(--black);
+  padding: 80px 48px 72px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.masthead::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 15% 100%, rgba(188,3,4,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 85% 0%, rgba(196,162,90,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.masthead-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 20px;
+}
+
+.masthead-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(64px, 10vw, 112px);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 0.95;
+  margin-bottom: 28px;
+}
+
+.masthead-title em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--red);
+}
+
+.masthead-rule {
+  width: 48px;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+  margin: 0 auto 24px;
+}
+
+.masthead-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 300;
+  color: rgba(255,255,255,0.55);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── EDITION INDEX ── */
+.edition-index {
+  background: var(--cream);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 48px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  overflow-x: auto;
+}
+
+.edition-index-label {
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.edition-pills {
+  display: flex;
+  gap: 8px;
+}
+
+.edition-pill {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  color: var(--text-body);
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  background: var(--white);
+}
+
+.edition-pill:hover,
+.edition-pill.active {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+/* ── EDITIONS ── */
+.editions-wrap { max-width: 1100px; margin: 0 auto; }
+
+.edition {
+  padding: 80px 48px;
+  border-bottom: 1px solid var(--border);
+}
+
+.edition:last-child { border-bottom: none; }
+
+/* Edition Header */
+.ed-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.ed-label-wrap { flex: 1; }
+
+.ed-issue {
+  font-size: 9px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 10px;
+}
+
+.ed-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--black);
+  margin-bottom: 12px;
+}
+
+.ed-title em {
+  font-style: italic;
+  color: var(--red);
+}
+
+.ed-deck {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--mid-gray);
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+.ed-meta {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.ed-date {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  margin-bottom: 4px;
+}
+
+.ed-badge {
+  display: inline-block;
+  background: var(--black);
+  color: var(--white);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+}
+
+/* Article Body */
+.ed-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.ed-body.full { grid-template-columns: 1fr; }
+.ed-body.three { grid-template-columns: 1fr 1fr 1fr; }
+
+/* Article Cards */
+.art-card { }
+
+.art-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 72px;
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1;
+  margin-bottom: -12px;
+}
+
+.art-overline {
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 10px;
+}
+
+.art-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--black);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.art-body {
+  font-size: 13px;
+  color: var(--text-body);
+  line-height: 1.85;
+}
+
+.art-body p { margin-bottom: 10px; }
+.art-body p:last-child { margin-bottom: 0; }
+
+.art-body strong {
+  font-weight: 500;
+  color: var(--black);
+}
+
+/* Numbered Steps */
+.steps { margin-top: 16px; }
+
+.step {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.step-num {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-weight: 400;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.step-content strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+  color: var(--black);
+}
+
+.step-content p {
+  font-size: 12px;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+/* Pull Quote */
+.pull-quote {
+  border-left: 3px solid var(--red);
+  padding: 20px 28px;
+  margin: 32px 0;
+  background: var(--cream);
+}
+
+.pull-quote p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--black);
+  line-height: 1.5;
+}
+
+.pull-quote cite {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  margin-top: 10px;
+  font-style: normal;
+}
+
+/* Feature Block */
+.feature-block {
+  background: var(--black);
+  padding: 48px;
+  margin: 48px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-block::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(188,3,4,0.15) 0%, transparent 70%);
+}
+
+.feature-block .art-overline { color: var(--red); }
+.feature-block .art-heading { color: var(--white); font-size: 28px; margin-bottom: 16px; }
+.feature-block .art-body { color: rgba(255,255,255,0.65); }
+.feature-block .pull-quote { background: rgba(255,255,255,0.05); border-color: var(--red); }
+.feature-block .pull-quote p { color: var(--white); }
+.feature-block .step-num { background: var(--red); }
+.feature-block .step-content strong { color: var(--white); }
+.feature-block .step-content p { color: rgba(255,255,255,0.65); }
+
+/* Tips List */
+.tips-list {
+  list-style: none;
+  margin-top: 12px;
+}
+
+.tips-list li {
+  font-size: 13px;
+  color: var(--text-body);
+  line-height: 1.7;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 12px;
+}
+
+.tips-list li::before {
+  content: '—';
+  color: var(--red);
+  flex-shrink: 0;
+  font-weight: 400;
+}
+
+.tips-list li:last-child { border-bottom: none; }
+
+/* Neighborhood Chips */
+.neighborhood-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.chip {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  color: var(--text-body);
+  padding: 5px 12px;
+}
+
+.chip.red {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--white);
+}
+
+/* Rule Divider */
+.ed-rule {
+  height: 1px;
+  background: var(--border);
+  margin: 48px 0;
+}
+
+/* CTA Strip */
+.ed-cta {
+  background: var(--red);
+  padding: 40px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.ed-cta-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.ed-cta-text p {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.7);
+}
+
+.ed-cta-btn {
+  background: var(--white);
+  color: var(--red);
+  font-family: 'Raleway', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  white-space: nowrap;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.ed-cta-btn:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* Edition Separator */
+.edition-sep {
+  text-align: center;
+  padding: 48px;
+  background: var(--cream);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.edition-sep span {
+  font-size: 9px;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+}
+
+/* Footer */
+.site-footer {
+  background: var(--black);
+  padding: 48px;
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--white); }
+
+.footer-copy {
+  font-size: 10px;
+  color: rgba(255,255,255,0.2);
+  letter-spacing: 0.1em;
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  .site-nav { padding: 14px 20px; }
+  .nav-links { display: none; }
+  .masthead { padding: 60px 20px 52px; }
+  .edition-index { padding: 16px 20px; }
+  .edition { padding: 48px 20px; }
+  .ed-body { grid-template-columns: 1fr; gap: 36px; }
+  .ed-body.three { grid-template-columns: 1fr; }
+  .ed-header { flex-direction: column; }
+  .ed-meta { text-align: left; }
+  .feature-block { padding: 28px 20px; }
+  .ed-cta { padding: 28px 20px; flex-direction: column; }
+  .site-footer { padding: 36px 20px; }
+}
+</style>
+
+<!-- Schema.org structured data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "The Essix Edit",
+  "description": "Editorial journal of The Essix Experience — luxury organizing, wardrobe curation, and relocation insights.",
+  "url": "https://www.theessixexperience.com/edit",
+  "publisher": {
+    "@type": "Organization",
+    "name": "The Essix Experience",
+    "url": "https://www.theessixexperience.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.theessixexperience.com/essix-logo.png"
+    }
+  },
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Summer Reset: How to Declutter Your Home Before the Season Shifts",
+      "datePublished": "2026-05-01",
+      "description": "A luxury organizing guide to preparing your home for summer — from wardrobe transitions to outdoor spaces.",
+      "author": { "@type": "Person", "name": "Falynn Essix" }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "The Miami Edit: Luxury Organizing for Brickell, Coral Gables, and Coconut Grove",
+      "datePublished": "2026-05-10",
+      "description": "A guide to settling into Miami's most prestigious neighborhoods — from wardrobe curation to move-in organizing.",
+      "author": { "@type": "Person", "name": "Falynn Essix" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav class="site-nav">
+  <a href="https://www.theessixexperience.com" class="nav-logo">The Essix Experience</a>
+  <ul class="nav-links">
+    <li><a href="https://www.theessixexperience.com">Home</a></li>
+    <li><a href="https://www.theessixexperience.com/#experiences">Experiences</a></li>
+    <li><a href="https://www.theessixexperience.com/#portfolio">Portfolio</a></li>
+    <li><a href="https://www.theessixexperience.com/edit" style="color:var(--red)">The Edit</a></li>
+    <li><a href="https://calendly.com/theessixexperience/first-call" class="nav-cta" target="_blank">Book Consult</a></li>
+  </ul>
+</nav>
+
+<!-- ── MASTHEAD ── -->
+<section class="masthead">
+  <div class="masthead-eyebrow">The Essix Experience — Editorial</div>
+  <h1 class="masthead-title">The Essix <em>Edit</em></h1>
+  <div class="masthead-rule"></div>
+  <p class="masthead-sub">A curated journal on luxury organizing, wardrobe curation, and the art of living well in beautiful spaces.</p>
+</section>
+
+<!-- ── EDITION INDEX ── -->
+<div class="edition-index">
+  <span class="edition-index-label">Editions</span>
+  <div class="edition-pills">
+    <a href="#may-2026" class="edition-pill active">May 2026 — Summer Reset</a>
+    <a href="#miami-edit" class="edition-pill">Miami Edition — Settling In</a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     EDITION 01 — MAY 2026: SUMMER RESET
+══════════════════════════════════════ -->
+<article class="edition" id="may-2026" itemscope itemtype="https://schema.org/BlogPosting">
+  <meta itemprop="datePublished" content="2026-05-01">
+  <meta itemprop="author" content="Falynn Essix">
+
+  <div class="editions-wrap">
+
+    <!-- Header -->
+    <div class="ed-header reveal">
+      <div class="ed-label-wrap">
+        <div class="ed-issue">Vol. 02 · May 2026 · Seasonal Living</div>
+        <h2 class="ed-title" itemprop="headline">
+          Summer Reset:<br>
+          <em>How to Declutter Before the Season Shifts</em>
+        </h2>
+        <p class="ed-deck" itemprop="description">The transition from spring to summer is one of the most powerful windows to reset your space. Here is how to move through it with intention — and without the overwhelm.</p>
+      </div>
+      <div class="ed-meta">
+        <div class="ed-date">May 2026</div>
+        <div class="ed-badge">Seasonal Reset</div>
+      </div>
+    </div>
+
+    <!-- Body: Two columns -->
+    <div class="ed-body reveal">
+
+      <!-- Left -->
+      <div>
+        <div class="art-overline">The Mindset First</div>
+        <h3 class="art-heading">Why Summer Is the Right Time to Let Go</h3>
+        <div class="art-body">
+          <p>There is something about longer days and open windows that makes it easier to see what no longer belongs. Summer brings clarity. The closet feels heavier when it is warm. The garage feels more chaotic when you are trying to get outside. The dining room table feels more cluttered when company is coming.</p>
+          <p>This is not a coincidence. Seasonal transitions are psychological reset points — moments when your relationship to your space naturally shifts. The question is whether you move through that shift intentionally or let another season pass without touching the things that have been bothering you since last fall.</p>
+          <p><strong>The Essix approach is simple:</strong> do not reorganize what you have not first edited. Organizing clutter creates the illusion of order. Editing it creates the reality of space.</p>
+        </div>
+
+        <div class="pull-quote reveal">
+          <p>"Organizing clutter creates the illusion of order. Editing it creates the reality of space."</p>
+          <cite>— Falynn Essix, The Essix Experience</cite>
+        </div>
+
+        <div class="art-overline" style="margin-top:32px;">What to Let Go Of</div>
+        <h3 class="art-heading">The Summer Edit List</h3>
+        <ul class="tips-list">
+          <li><strong>Anything unworn for 12+ months.</strong> If it did not make the rotation last summer, it likely will not this year. The exception: a specific occasion piece you are holding for a reason. Everything else is eligible.</li>
+          <li><strong>Duplicate kitchen and outdoor entertaining items.</strong> Three serving platters, two sets of outdoor cushions, four variations of the same storage bin — summer is when these surface. Keep the best version of each.</li>
+          <li><strong>Expired, half-used, or abandoned products.</strong> Sunscreen from 2023, skincare you stopped using, the cleaning supplies that have not moved since you bought them. Clear the cabinet.</li>
+          <li><strong>Outdoor gear that does not get used.</strong> The kayak you paddled twice, the camping equipment from a single trip, the kids' sports gear for a sport they no longer play. Donate it to someone who will actually use it.</li>
+          <li><strong>The pile.</strong> Every home has one. A surface, a chair, a corner that collects everything with nowhere to go. This season, give it nowhere to return to.</li>
+        </ul>
+      </div>
+
+      <!-- Right -->
+      <div>
+        <div class="art-overline">The Wardrobe Transition</div>
+        <h3 class="art-heading">Seasonal Rotation Done Right</h3>
+        <div class="art-body">
+          <p>Most people approach wardrobe rotation as a logistical task — swap winter for summer, move things around, close the closet. The Essix approach treats it as an editorial process. Every piece that comes out of storage should earn its way back in.</p>
+          <p>Before anything goes back on the rod, ask three questions: Does it still fit the way I want it to? Does it reflect who I am right now? Would I buy it again today? If the answer to any of those is no, the piece has had its season.</p>
+        </div>
+
+        <div class="steps" style="margin-top:20px;">
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <strong>Pull everything out first</strong>
+              <p>Do not edit from inside the closet. Lay everything on the bed. See the full volume of what you own before deciding what stays.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <strong>Category before color</strong>
+              <p>Group by type — all tops together, all bottoms, all dresses. This reveals what you actually have versus what you think you have.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <strong>Edit to your actual life</strong>
+              <p>Not the life you plan to have. Not the life you had three years ago. The one you are living right now — your real schedule, your real body, your real style.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <strong>Return only what belongs</strong>
+              <p>Everything that earns its way back in gets hung, folded, and placed with intention. Grouping by category and color is not aesthetics — it reduces decision fatigue every morning.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">05</div>
+            <div class="step-content">
+              <strong>Identify the gaps honestly</strong>
+              <p>After the edit, the closet will tell you what it actually needs. A few intentional additions beat a full rack of things that do not quite work.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="art-overline" style="margin-top:36px;">The Storage Question</div>
+        <h3 class="art-heading">Off-Season Storage Done Well</h3>
+        <div class="art-body">
+          <p>What goes into storage matters as much as what comes out. Heavy knits, wool coats, and structured blazers should be cleaned before they are stored — oils, perfume, and body residue attract moths and break down fabric over time.</p>
+          <p>Use breathable garment bags for structured pieces. Cedar blocks, not mothballs. Label every bin with the season and the category — not just "winter clothes" but "winter — sweaters and base layers." Next November, you will thank yourself.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature Block -->
+    <div class="feature-block reveal">
+      <div class="ed-body" style="grid-template-columns:1fr 1fr; gap:48px; margin-bottom:0;">
+        <div>
+          <div class="art-overline">The Spaces We Forget</div>
+          <h3 class="art-heading" style="color:var(--white);">The Outdoor Reset</h3>
+          <div class="art-body">
+            <p>The garage. The shed. The patio storage bench. The exterior closet that has become a graveyard for things with no other home. Summer forces these spaces into use — and nothing deflates the energy of a beautiful outdoor moment like opening a door to chaos.</p>
+            <p>The outdoor reset does not require a weekend. It requires two hours and a clear decision framework: keep it, donate it, or discard it responsibly. Nothing in between.</p>
+          </div>
+          <div class="steps" style="margin-top:20px;">
+            <div class="step">
+              <div class="step-num">01</div>
+              <div class="step-content">
+                <strong>Empty the space completely</strong>
+                <p>You cannot make clear decisions when things are buried. Pull everything out and see the full scope before a single decision is made.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">02</div>
+              <div class="step-content">
+                <strong>Zone by activity, not category</strong>
+                <p>Create a gardening zone, a sports zone, a tools zone, a seasonal entertaining zone. Keep what belongs to each activity together so you never have to search.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">03</div>
+              <div class="step-content">
+                <strong>Label everything that goes back in</strong>
+                <p>Clear bins with labels. Wall hooks for frequently used items. Vertical storage wherever possible — floor space in a garage or shed should be used for oversized items only.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="pull-quote" style="margin-top:0;">
+            <p>"The outdoor reset does not require a weekend. It requires two hours and a clear decision framework."</p>
+            <cite style="color:rgba(255,255,255,0.4);">— The Essix Edit, May 2026</cite>
+          </div>
+          <div class="art-overline" style="margin-top:32px;">Before You Spend a Dollar</div>
+          <h3 class="art-heading" style="color:var(--white);">What the Edit Reveals</h3>
+          <div class="art-body">
+            <p>One of the most expensive organizing mistakes is buying storage solutions before the edit. Bins, baskets, drawer dividers, label makers — none of it works if the underlying volume of things is wrong.</p>
+            <p>The sequence is always: edit first, then measure, then shop. What the edit reveals will tell you exactly what you need — and it will almost always be less than you expected.</p>
+            <p>The edit also reveals what is genuinely missing. A proper tool wall, a shoe rack that fits your actual shoe count, a wardrobe steamer. These are investments that make sense. The storage bin that becomes another place to put things you cannot decide about is not.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="ed-cta reveal">
+      <div class="ed-cta-text">
+        <h3>Ready for a Full Summer Reset?</h3>
+        <p>Limited availability for May and June — book your complimentary consultation today.</p>
+      </div>
+      <a href="https://calendly.com/theessixexperience/first-call" target="_blank" class="ed-cta-btn">Book Your Consult</a>
+    </div>
+
+  </div>
+</article>
+
+<!-- ── Edition Separator ── -->
+<div class="edition-sep">
+  <span>Next Edition</span>
+</div>
+
+<!-- ══════════════════════════════════════
+     EDITION 02 — THE MIAMI EDIT
+══════════════════════════════════════ -->
+<article class="edition" id="miami-edit" itemscope itemtype="https://schema.org/BlogPosting">
+  <meta itemprop="datePublished" content="2026-05-10">
+  <meta itemprop="author" content="Falynn Essix">
+
+  <div class="editions-wrap">
+
+    <!-- Header -->
+    <div class="ed-header reveal">
+      <div class="ed-label-wrap">
+        <div class="ed-issue">Vol. 03 · May 2026 · City Edition</div>
+        <h2 class="ed-title" itemprop="headline">
+          The Miami <em>Edit:</em><br>
+          Settling Into Your New Space
+        </h2>
+        <p class="ed-deck" itemprop="description">Miami is not a city you move to — it is a city you arrive into. Whether you are relocating from New York, Los Angeles, or internationally, the way you set up your space in the first ninety days shapes how the city feels for years.</p>
+      </div>
+      <div class="ed-meta">
+        <div class="ed-date">May 2026</div>
+        <div class="ed-badge">Miami Edition</div>
+      </div>
+    </div>
+
+    <!-- Neighborhood chips -->
+    <div class="neighborhood-chips reveal" style="margin-bottom:48px;">
+      <span class="chip red">Now Serving Miami</span>
+      <span class="chip">Brickell</span>
+      <span class="chip">Coconut Grove</span>
+      <span class="chip">Coral Gables</span>
+      <span class="chip">Fisher Island</span>
+      <span class="chip">Miami Beach</span>
+      <span class="chip">Pinecrest</span>
+    </div>
+
+    <!-- Intro -->
+    <div class="ed-body reveal">
+      <div>
+        <div class="art-overline">The Arrival</div>
+        <h3 class="art-heading">Miami Is Different. Your Space Setup Should Be Too.</h3>
+        <div class="art-body">
+          <p>Most people who relocate to Miami arrive with the habits of the city they left. A New Yorker brings a wardrobe built for cold subway commutes and layering. A Chicagoan arrives with heavy storage furniture designed for a climate that demands it. A Los Angeleno brings a car-first lifestyle that still somehow does not account for Miami heat.</p>
+          <p>Miami will ask you to rethink all of it. The climate, the pace, the social landscape, the indoor-outdoor flow of every space — they demand a different relationship to your belongings. The wardrobe that served you for a decade may need a complete reimagination. The organization system that worked in a Chicago brownstone may not serve a Brickell high-rise or a Coral Gables estate.</p>
+          <p><strong>The first ninety days are a window.</strong> Before habits form around your new space, before the boxes become furniture, before the closet becomes the place everything goes — this is when thoughtful setup pays its greatest return.</p>
+        </div>
+      </div>
+      <div>
+        <div class="pull-quote">
+          <p>"Miami will ask you to rethink your wardrobe, your systems, and your relationship to your space. The first ninety days are the window."</p>
+          <cite>— Falynn Essix, The Essix Experience</cite>
+        </div>
+        <div class="art-overline" style="margin-top:32px;">The Climate Shift</div>
+        <h3 class="art-heading">What Miami Heat Actually Means for Your Closet</h3>
+        <div class="art-body">
+          <p>Miami is not just warm — it is humid. That distinction changes everything about how you store and care for clothing. Natural fibers breathe; synthetics trap heat. Structured pieces need more space than they did in a dry climate. Leather requires active care in high-humidity environments.</p>
+          <p>The Miami wardrobe is not minimal — but it is intentional. The pieces that earn space are the ones that work with the climate rather than against it. Linen, cotton, lightweight wool for the rare cold front, and the occasional structured piece for the air-conditioned interiors that define upscale Miami.</p>
+        </div>
+        <ul class="tips-list" style="margin-top:12px;">
+          <li>Rotate out wool coats, heavy denim, and thick knits — store them properly or donate what you will not wear seasonally.</li>
+          <li>Invest in cedar and silica gel packets throughout closets to manage humidity and protect leather goods.</li>
+          <li>Use open shelving or ventilated wardrobes where possible — air circulation is your best storage ally in Miami.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ed-rule"></div>
+
+    <!-- Three column section -->
+    <div class="ed-body three reveal">
+      <div class="art-card">
+        <div class="art-number">01</div>
+        <div class="art-overline">Brickell & Downtown</div>
+        <h3 class="art-heading">The High-Rise Setup</h3>
+        <div class="art-body">
+          <p>Brickell condos are architecturally stunning and spatially precise. Every square foot is intentional, which means your organization must be equally so. There is no garage, no basement, no attic. What is in the unit is what you have.</p>
+          <p>The move-in moment is critical. Unpack with the space in mind, not the box. A kitchen that functions for a Miami lifestyle — entertaining, delivery, and the occasional home-cooked meal — looks different from one organized for a suburban family kitchen. Every zone should serve the way you actually live, not the way you packed.</p>
+        </div>
+      </div>
+      <div class="art-card">
+        <div class="art-number">02</div>
+        <div class="art-overline">Coconut Grove & Coral Gables</div>
+        <h3 class="art-heading">The Estate Arrival</h3>
+        <div class="art-body">
+          <p>The Grove and the Gables offer something Brickell does not: space. Estates with multiple bedrooms, primary closets the size of rooms, garages that could hold a household. Space without system, however, becomes storage. And storage becomes chaos.</p>
+          <p>Arriving into a large space without an organizing plan is how five years later you find yourself with rooms that have become repositories. The arrival is the moment. Set the zones — the primary closet, the kitchen, the home office, the garage — before the movers leave, if possible. The bones of the system matter more than any individual product.</p>
+        </div>
+      </div>
+      <div class="art-card">
+        <div class="art-number">03</div>
+        <div class="art-overline">Fisher Island & Miami Beach</div>
+        <h3 class="art-heading">The Luxury Arrival</h3>
+        <div class="art-body">
+          <p>Fisher Island is the most exclusive zip code in the United States by median income. Miami Beach is one of the most internationally recognized luxury markets in the world. Arriving into either demands an arrival experience that reflects that.</p>
+          <p>A wardrobe that is curated, not just organized. A kitchen that is stocked and functional from day one. A home office that is set up and ready. A closet that is a space, not a holding area. This is what The Essix Experience delivers — not just the logistics of the move, but the lived experience of arriving.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ed-rule"></div>
+
+    <!-- Feature -->
+    <div class="feature-block reveal">
+      <div class="ed-body" style="grid-template-columns:1fr 1fr;gap:48px;margin-bottom:0;">
+        <div>
+          <div class="art-overline">The Grand Voyage</div>
+          <h3 class="art-heading" style="color:var(--white);">What a White-Glove Relocation Actually Looks Like</h3>
+          <div class="art-body">
+            <p>The Grand Voyage is The Essix Experience's full-service relocation offering — available nationwide and now actively serving Miami. It begins before the first box is packed and ends when the space is completely move-in ready, organized, and lived in.</p>
+            <p>Falynn and her team work with movers, real estate agents, interior designers, and the client directly — coordinating the full arrival so nothing falls through the cracks. The wardrobe is curated before anything goes back in the closet. The kitchen is organized for how the client actually cooks. The home office is functional from day one.</p>
+            <p>For clients relocating from New York, Chicago, or Los Angeles — cities with dense networks of service providers — Miami can feel like starting from scratch. The Grand Voyage ensures you do not have to.</p>
+          </div>
+        </div>
+        <div>
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">01</div>
+              <div class="step-content">
+                <strong>Pre-Move Consultation</strong>
+                <p>What comes to Miami and what does not. What the new space needs and what it does not. The edit happens before the truck is loaded.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">02</div>
+              <div class="step-content">
+                <strong>Arrival Day Coordination</strong>
+                <p>On-site for delivery — directing movers, placing furniture, establishing zones before boxes are opened. The chaos of arrival, managed.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">03</div>
+              <div class="step-content">
+                <strong>Full Unpack and Setup</strong>
+                <p>Every room. Every closet. Every kitchen cabinet. Organized for the way you live, not the way things were packed.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">04</div>
+              <div class="step-content">
+                <strong>Wardrobe Curation</strong>
+                <p>The Miami wardrobe is not the wardrobe from wherever you came from. What stays, what goes, what gaps exist — all addressed before the closet is closed.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">05</div>
+              <div class="step-content">
+                <strong>The Walkthrough</strong>
+                <p>Before we leave, you walk through every room with us. The space should feel like home — not like you just moved in.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Miami Tips -->
+    <div class="ed-body reveal" style="margin-top:48px;">
+      <div>
+        <div class="art-overline">From the Field</div>
+        <h3 class="art-heading">What We Have Learned Setting Up Miami Homes</h3>
+        <ul class="tips-list">
+          <li><strong>Miami closets are larger than most cities, but they still need a system.</strong> Square footage without structure is just a bigger pile.</li>
+          <li><strong>The kitchen usually needs a full reset.</strong> Clients moving from dense urban apartments often have equipment for a different life. The Miami kitchen — built for entertaining, outdoor connection, and a more social pace — deserves an honest audit.</li>
+          <li><strong>Humidity is the silent enemy of storage.</strong> Cedar, silica, proper ventilation, and regular checks. This is not optional in South Florida.</li>
+          <li><strong>The outdoor space is part of the home.</strong> A patio, terrace, or lanai that is disorganized or underutilized is lost living space. Miami's outdoor season is year-round — the space should reflect that.</li>
+          <li><strong>The first 90 days set the pattern.</strong> How you live in a space in the first three months tends to become how you live in it for years. The arrival matters more than most people realize.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="art-overline">Now Serving Miami</div>
+        <h3 class="art-heading">The Essix Experience Is Here</h3>
+        <div class="art-body">
+          <p>The Essix Experience is now actively serving clients across Miami-Dade — Brickell, Coconut Grove, Coral Gables, Miami Beach, Pinecrest, and Fisher Island. Every experience available nationwide is available in Miami, in person, without travel surcharges.</p>
+          <p>Whether you are arriving from another city or have been here for years and the space has never quite worked the way you wanted it to, the consult is always complimentary and the conversation is always without pressure.</p>
+          <p>Miami is a city that rewards people who build a life here with intention. Your space should reflect that intention from the moment you arrive — or the moment you decide it is time for it to.</p>
+        </div>
+        <div class="neighborhood-chips" style="margin-top:20px;">
+          <span class="chip red">Free Consult</span>
+          <span class="chip">No Travel Fee</span>
+          <span class="chip">In-Person Available</span>
+          <span class="chip">Virtual Available</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="ed-cta reveal" style="margin-top:48px;">
+      <div class="ed-cta-text">
+        <h3>Relocating to Miami? Let's Talk.</h3>
+        <p>Complimentary consultation — no pressure, no commitment. Serving Brickell, Coral Gables, Coconut Grove, Miami Beach, and surrounding areas.</p>
+      </div>
+      <a href="https://calendly.com/theessixexperience/first-call" target="_blank" class="ed-cta-btn">Book a Miami Consult</a>
+    </div>
+
+  </div>
+</article>
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer">
+  <div class="footer-logo">The Essix Experience</div>
+  <div class="footer-links">
+    <a href="https://www.theessixexperience.com">Home</a>
+    <a href="https://www.theessixexperience.com/#experiences">Experiences</a>
+    <a href="https://www.theessixexperience.com/#portfolio">Portfolio</a>
+    <a href="https://www.theessixexperience.com/edit">The Edit</a>
+    <a href="https://www.theessixexperience.com/#connect">Connect</a>
+    <a href="https://www.instagram.com/essix_experience" target="_blank">Instagram</a>
+  </div>
+  <div class="footer-copy">© 2026 The Essix Experience · theessixexperience.com</div>
+</footer>
+
+<script>
+// Reveal on scroll
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+reveals.forEach(r => observer.observe(r));
+
+// Edition pill active state on scroll
+const editions = document.querySelectorAll('.edition');
+const pills = document.querySelectorAll('.edition-pill');
+
+const edObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      pills.forEach(p => p.classList.remove('active'));
+      const id = e.target.id;
+      const pill = document.querySelector(`.edition-pill[href="#${id}"]`);
+      if (pill) pill.classList.add('active');
+    }
+  });
+}, { threshold: 0.3 });
+editions.forEach(ed => edObserver.observe(ed));
+</script>
+
+</body>
+</html>
